@@ -13,10 +13,10 @@ class Student
     public:
         Student(string first, string second, string father,int n,float res[5])
         {
-            string first_n = first;
-            string second_n = second;
-            string father_n = father;
-            int numb = n;
+            first_n = first;
+            second_n = second;
+            father_n = father;
+            numb = n;
             float sum = 0;
             for(int i = 0; i < 5; ++i){
                 reses[i] = res[i];
@@ -25,8 +25,7 @@ class Student
             mid_score = sum / 5.0;
         }
         bool test(){return (mid_score > 4.2);}
-        void FIO(){cout << second_n << ' ' << first_n << ' ' << father_n << ' ';}
-        void number(){cout << numb;}
+        void Info(){cout << second_n << ' ' << first_n << ' ' << father_n << ' '<< numb <<endl;}
 };
 int main()
 {
@@ -43,10 +42,9 @@ int main()
         Group.push_back(Student(sec,fir,fath,num,lis));
     }
     for (auto& i : Group){
-        if (i.test()){
+        if ((i).test()){
             fl = 1;
-            i.FIO();
-            i.number();
+            (i).Info();
         }
     }
     if(fl == 0){ cout << "There is no good Students in the Group.";}
